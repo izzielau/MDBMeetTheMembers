@@ -21,6 +21,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="w4t-6X-EkW"/>
+                    <connections>
+                        <segue destination="Fi9-S7-cfi" kind="show" identifier="toGame" id="0P7-Qg-Ymz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -38,11 +41,50 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UmU-wE-3Fy"/>
+                        <segue destination="Tq4-2l-zA0" kind="show" identifier="toStats" id="osC-Au-xAI"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nya-tR-M6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="290" y="134"/>
         </scene>
+        <!--Game View Controller-->
+        <scene sceneID="EC2-ad-GI7">
+            <objects>
+                <viewController id="Fi9-S7-cfi" customClass="GameViewController" customModule="MeetTheMembers" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pbe-QG-IzT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="MIv-8Y-G0j"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LGa-Gz-RbQ"/>
+                    <connections>
+                        <segue destination="Tq4-2l-zA0" kind="show" identifier="toStats" id="4hN-Id-V1H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oQK-rK-qoD" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1865" y="134"/>
+        </scene>
+        <!--Stats View Controller-->
+        <scene sceneID="GNo-Sl-Q52">
+            <objects>
+                <viewController id="Tq4-2l-zA0" customClass="StatsViewController" customModule="MeetTheMembers" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6ox-G4-XT7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="yaa-tb-TAb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OOe-zp-8dG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3gW-wm-eh2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1455" y="882"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4hN-Id-V1H"/>
+    </inferredMetricsTieBreakers>
 </document>
