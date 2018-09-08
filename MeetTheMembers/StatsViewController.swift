@@ -20,7 +20,7 @@ class StatsViewController: UIViewController {
     var recentBanner : UILabel!
     var streakData : UILabel!
     var recentData : UILabel!
-    
+
     var constants = Constants()
     
     override func viewDidLoad() {
@@ -80,11 +80,14 @@ class StatsViewController: UIViewController {
         for answer in recentAnswers! {
             combination += answer + "  "
         }
-        recentData = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 30))
-        recentData.text = combination
+        
+        recentData = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 48.0))
         recentData.font = UIFont(name: "AmericanTypewriter", size: 18.0)
         recentData.textAlignment = .center
         recentData.center = CGPoint(x: view.frame.width / 2, y: view.frame.height - 210)
+        recentData.lineBreakMode = NSLineBreakMode.byWordWrapping
+        recentData.numberOfLines = 3
+        recentData.text = combination
         view.addSubview(recentData)
     }
 }

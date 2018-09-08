@@ -169,7 +169,7 @@ class GameViewController: UIViewController {
                 scoreLabel.text = "\(score)"
                 
                 currentStreak += 1
-                recentAnswers.append("Correct")
+                recentAnswers.append(chosen.currentTitle!)
 
                 if (currentStreak > highestStreak) {
                     highestStreak = currentStreak
@@ -178,14 +178,14 @@ class GameViewController: UIViewController {
             else if chosen == button && !correct {
                 button.backgroundColor = constants.red
                 
+                recentAnswers.append(chosen.currentTitle!)
                 currentStreak = 0
-                recentAnswers.append("Incorrect")
             }
             else {
                 button.backgroundColor = constants.silver
             }
             
-            if recentAnswers.count >= 4 {
+            if recentAnswers.count > 3 {
                 recentAnswers.remove(at: 0)
             }
         }
